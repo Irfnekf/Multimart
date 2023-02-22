@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 export const Helmet = ({ title, children }) => {
-  document.title = "Maltimart - " + title;
+  document.title = 'Multimart - ' + title;
 
   return <div className="w-100">{children}</div>;
 };
