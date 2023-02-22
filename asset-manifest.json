@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Multimart/static/css/main.169c5ceb.css",
-    "main.js": "/Multimart/static/js/main.0fe0aef7.js",
+    "main.js": "/Multimart/static/js/main.c2f40833.js",
     "static/media/single-sofa-01.jpg": "/Multimart/static/media/single-sofa-01.db24b9feed7582c4e98d.jpg",
     "static/media/arm-chair-03.jpg": "/Multimart/static/media/arm-chair-03.3249f382638c86196acd.jpg",
     "static/media/single-sofa-03.jpg": "/Multimart/static/media/single-sofa-03.0d976c067034347df78d.jpg",
@@ -32,10 +32,10 @@
     "static/media/wireless-01.png": "/Multimart/static/media/wireless-01.1a76d777727c50ca0294.png",
     "index.html": "/Multimart/index.html",
     "main.169c5ceb.css.map": "/Multimart/static/css/main.169c5ceb.css.map",
-    "main.0fe0aef7.js.map": "/Multimart/static/js/main.0fe0aef7.js.map"
+    "main.c2f40833.js.map": "/Multimart/static/js/main.c2f40833.js.map"
   },
   "entrypoints": [
     "static/css/main.169c5ceb.css",
-    "static/js/main.0fe0aef7.js"
+    "static/js/main.c2f40833.js"
   ]
 }
