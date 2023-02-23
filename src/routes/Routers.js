@@ -11,14 +11,14 @@ import Signup from '../pages/Signup';
 const Routers = () => {
   return (
     <Routes>
-      <Route path="Multimart/" element={<Navigate to="home" />} />
-      <Route path="Multimart/home" element={<Home />} />
-      <Route path="Multimart/shop" element={<Shop />} />
-      <Route path="Multimart/shop/:id" element={<ProductDetails />} />
-      <Route path="Multimart/cart" element={<Cart />} />
-      <Route path="Multimart/checkout" element={<Checkout />} />
-      <Route path="Multimart/login" element={<Login />} />
-      <Route path="Multimart/signup" element={<Signup />} />
+      <Route path="Multimart" element={<Navigate to="Multimart/" />} />
+      <Route path="Multimart/" element={<Home />} />
+      <Route path="/shop" element={<Shop />} />
+      <Route path="/shop/:id" element={<ProductDetails />} />
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/checkout" element={<Checkout />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
     </Routes>
   );
 };

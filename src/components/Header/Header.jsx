@@ -9,15 +9,15 @@ import { motion } from 'framer-motion';
 const Header = () => {
   const nav__links = [
     {
-      path: 'Multimart/home',
+      path: 'Multimart',
       display: 'Home',
     },
     {
-      path: 'Multimart/shop',
+      path: '/shop',
       display: 'Shop',
     },
     {
-      path: 'Multimart/cart',
+      path: '/cart',
       display: 'Cart',
     },
   ];
