@@ -3,8 +3,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import '../../styles/product-card.css';
+import { memo } from 'react';
 
 const ProductCard = ({ item }) => {
   const { imgUrl, id, productName, price, category } = item;
@@ -32,4 +34,14 @@ const ProductCard = ({ item }) => {
   );
 };
 
-export default ProductCard;
+export default memo(ProductCard);
+
+ProductCard.propTypes = {
+  item: PropTypes.shape({
+    imgUrl: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+    productName: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    category: PropTypes.string.isRequired,
+  }).isRequired,
+};

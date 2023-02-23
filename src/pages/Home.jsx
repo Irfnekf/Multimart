@@ -18,21 +18,36 @@ import heroImg from '../assets/images/hero-img.png';
 const Home = () => {
   const [trendingProducts, setTrendingProducts] = useState([]);
   const [bestSalesProducts, setBestSalesProducts] = useState([]);
+  const [mobileProducts, setMobileProducts] = useState([]);
+  const [wirelessProducts, setWirelessProducts] = useState([]);
+  const [popularProducts, setPopularProducts] = useState([]);
 
   const year = new Date().getFullYear();
 
-  const filteredTrendingProducts = products.filter(
-    ({ category }) => category === 'chair'
-  );
-
-  const filteredSalesProducts = products.filter(
-    ({ category }) => category === 'sofa'
-  );
-
   useEffect(() => {
+    const filteredTrendingProducts = products.filter(
+      ({ category }) => category === 'chair'
+    );
+
+    const filteredSalesProducts = products.filter(
+      ({ category }) => category === 'sofa'
+    );
+    const filteredMobileProducts = products.filter(
+      ({ category }) => category === 'mobile'
+    );
+    const filteredWirelessProducts = products.filter(
+      ({ category }) => category === 'wireless'
+    );
+    const filteredPopularProducts = products.filter(
+      ({ category }) => category === 'watch'
+    );
+
     setTrendingProducts(filteredTrendingProducts);
     setBestSalesProducts(filteredSalesProducts);
-  }, [filteredTrendingProducts, filteredSalesProducts]);
+    setMobileProducts(filteredMobileProducts);
+    setWirelessProducts(filteredWirelessProducts);
+    setPopularProducts(filteredPopularProducts);
+  }, []);
 
   return (
     <Helmet title={'Home'}>
@@ -102,6 +117,27 @@ const Home = () => {
             <Col lg="6" md="6" className="text-end">
               <img src={counterImg} alt="" />
             </Col>
+          </Row>
+        </Container>
+      </section>
+      <section className="new__arrivals">
+        <Container>
+          <Row>
+            <Col lg="12" className="text-center mb-5">
+              <h2 className="section__title">New Arrivals</h2>
+            </Col>
+            <ProductsList data={mobileProducts} />
+            <ProductsList data={wirelessProducts} />
+          </Row>
+        </Container>
+      </section>
+      <section className="popular__category">
+        <Container>
+          <Row>
+            <Col lg="12" className="text-center mb-5">
+              <h2 className="section__title">Popular in Category</h2>
+            </Col>
+            <ProductsList data={popularProducts} />
           </Row>
         </Container>
       </section>

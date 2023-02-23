@@ -32,8 +32,9 @@ const Header = () => {
           <div className="nav__wrapper">
             <div className="logo">
               <img src={logo} alt="logo" />
-              <h1>Multimart</h1>
-              <p>Since 1997</p>
+              <div>
+                <h1>Multimart</h1>
+              </div>
             </div>
             <div className="navigation">
               <ul className="menu">

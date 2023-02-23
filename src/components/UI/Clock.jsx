@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, memo, useCallback } from 'react';
 
 const Clock = () => {
   const [days, setDays] = useState();
@@ -6,12 +6,10 @@ const Clock = () => {
   const [minutes, setMinutes] = useState();
   const [seconds, setSeconds] = useState();
 
-  let interval;
-
-  const countDown = () => {
+  const countDown = useCallback(() => {
     const destination = new Date('May 10, 2023').getTime();
 
-    interval = setInterval(() => {
+    let interval = setInterval(() => {
       const now = new Date().getTime();
       const different = destination - now;
       const days = Math.floor(different / (1000 * 60 * 60 * 24));
@@ -30,8 +28,8 @@ const Clock = () => {
         setMinutes(minutes);
         setSeconds(seconds);
       }
-    }, interval);
-  };
+    });
+  }, []);
 
   useEffect(() => {
     countDown();
@@ -73,4 +71,4 @@ const Clock = () => {
   );
 };
 
-export default Clock;
+export default memo(Clock);
